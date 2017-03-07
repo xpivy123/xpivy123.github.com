@@ -4,89 +4,213 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>test1</title>
 <style>
-nav{ width:100%; height:60px; background:#00A2CA;margin:0 auto} 
-nav li{display:inline; height:60px} 
-nav li a{display:inline-block; padding:0 20px; height:60px; line-height:60px;color:#FFF; font-family:"\5FAE\8F6F\96C5\9ED1"; font-size:16px} 
-nav li a:hover{background:#0095BB}
+/*全局CSS*/
+	*{padding: 0;margin: 0}
+	ol, ul ,li{list-style:none}
+	img {border: 0; vertical-align:middle}
+	body{color:#000000;background:#FFF;} 
+	a{color:#Fa0215;text-decoration:none}  
+	a:hover{color:#BA2636}
+	table{border-collapse: collapse;border-spacing: 0;} 
+	p{word-wrap: break-word;}
+/*头部CSS*/
+	#header{height: 60px;background-color: #333;margin-bottom: 20px;}
+	#header h1{float: left;width: 157px;height: 60px;}
+	#header h1 a{display: inline-block;float: left;height: 38px;width: 117px;margin: 10px 40px;text-indent: -1000px;background: url(https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png) no-repeat;}
+
+	#nav ul{float: right;height: 60px;}
+	#nav li{height: 60px;float: left;}
+	#nav ul li a{display: inline-block;padding: 22px 10px;font-size: 12px;line-height: 16px;color: #eee;text-decoration:none;}
+	#nav ul li a:hover{color: #333;background-color: #eee;}
+
+/*main css*/
+#mian{
+	border: 1px solid #CBCBCB;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px #848484;
+}
+#main .wz h2{
+   padding: 20px 0;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: 600;
+}
+#main .wz h3{
+    font-size: 16px;
+    line-height: 16px;
+    color: #646464;
+    padding-bottom: 18px;
+}
+#main  #lb {
+    color: #969696;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+/*侧栏CSS*/
+	#main #aside{border: 2px solid #CCC2BA;margin-bottom: 20px;padding: 20px;background-color: #fff;box-shadow: 1px 1px 1px #848884;}
+	#main #aside h1{height: 38px;font-size: 16px;line-height: 38px;padding-left: 10px;margin-bottom: 10px;border-left: 3px solid #CDCDCD;}
+	#main #aside #zc{width: 100%;}
+/*	footer*/
+	#footer{height: 70px;text-align: center;background-color: #000;}
+	#footer span{
+    color: #eee;
+    font-size: 12px;
+    line-height: 12px;
+    margin-top: 20px;
+    display: inline-block;}
 </style>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li>
-				<a href="#">项目1</a>
-				<a href="#">项目2</a>
-				<a href="#">项目3</a>
-				<a href="#">项目4</a>
-				<a href="#">项目5</a>
-				<a href="#">项目6</a>
-			</li>
-		</ul>
-	</nav>
-	<div>
-		<h1>项目1</h1>
-	<p>这是一个作业，</p>
-	</div>
-	<div>
-		<h2>项目2</h2>
-		<p>这是一个链接</p>
-		<p><a href="http://ife.baidu.com" target="_blank">这里有一个链接</a></p>
-	</div>
-	<div>
-		<h3>项目3</h3>
-		<p>这是一个下拉选择框</p>
-		<select>
-	        <option>四川</option>
-	        <option>广东</option>
-	        <option>广西</option>
-	        <option>湖南</option>
-	        <option selected="selected">新疆</option>
-	    </select>
-	</div>
-	<div>
-		<h4>项目4</h4>
-		<p>这是一个单选框</p>
-		<input type="radio" id="nan" name="gender">
-		<label for="nan">男</label>
-		<input type="radio" id="nv" name="gender">
-		<label for="nv">女</label>
-	</div>
-	<div>
-		<h5>项目5</h5>
-		<p>这是一个表格</p>
-		<table border="1">
-			<td colspan="2">1000</td>
-			<td colspan="3">1500</td>
-			<td colspan="4">100</td>
-			<td colspan="5">500</td>
-		</table>
-		<table border=0 title="测试">
-		    <caption> 表格</caption>
-		    <tr>
-		        <th>姓名</th>
-		        <th>年龄</th>
-		    </tr>
-		    <tr>
-		        <td>张三</td>
-		        <td>22</td>
-		    </tr>
-		    <tr>
-		        <td><input type=text /></td>
-		        <td><input type=text /></td>
-		    </tr>
-		</table>
-	</div>
-	<div>
-		<h6>项目6</h6>
-		<p>这是一个登录框</p>
-		<div>
-			<form action="http://ife.baidu.com" method="get">
-	  			name: <input type="text" name="name" />
-	  			pass: <input type="text" name="pass" />
-	  			<input type="submit" value="登录" />
-			</form>
+	<header>
+		<h1>一级标题</h1>
+		<div id="nav">
+			<ul>
+				<li><a href="http://ife.baidu.com">导航链接1</a></li>
+				<li><a href="http://ife.baidu.com">导航链接2</a></li>
+				<li><a href="http://ife.baidu.com">导航链接3</a></li>
+				<li><a href="http://ife.baidu.com">导航链接4</a></li>
+			</ul>
+		</div>
+	</header>
+	
+	<div id="main">
+		<div id="content">
+			<div id="wz1" class="wz">
+				<h1>一级标题</h1>
+				<h2>二级标题</h2>
+				<p>文章作者</p><p>文章发布时间</p>
+				<p>这是一个段落，学习用的，这是一个段落，学习用，这是一个段落，学习<br>这是一个段落，学习用的，这是一个段落，学习用，这是一个段落，学习用的，<a href="http://ife.baidu.com">百度前端技术学院</a>
+				</p>
+				<img src="./img/tk.jpg" alt="tk">
+				<p>这是一个段落，学习用的，这是一个段落，学习用，这是一个段落，学习<br>这是一个段落，学习用的，这是一个段落，学习用，这是一个段落，学习用的，<a href="http://ife.baidu.com">百度前端技术学院</a>
+				</p>
+			</div>
+			<div id="wz2" class="wz">
+				<h1>一级标题</h1>
+				<h2>二级标题</h2>
+				<p>文章作者</p><p>文章发布时间</p>
+				<p>这是一个段落，学习用的，这是一个段落，学习用，这是一个段落，学习<br>这是一个段落，学习用的，这是一个段落，学习用，这是一个段落，学习用的，<a href="http://ife.baidu.com">百度前端技术学院</a>
+				</p>
+				<img src="./img/tk.jpg" alt="tk">
+			</div>
+			
+			<div id="lb">
+				<ul>
+					<li>列表项目1</li>
+					<li>列表项目2</li>
+					<li>列表项目3</li>
+					<li>列表项目4</li>
+				</ul>
+			</div>
+			<div id="tp">
+				<h1>图片</h1>
+				<div class="img00">
+					<p>图片欣赏</p>
+					<img src="./img/tk.jpg" alt="tk" >
+				</div>
+				<div class="img00">
+					<p>图片欣赏</p>
+					<img src="./img/tk.jpg" alt="tk" >
+				</div>
+				<div class="img00">
+					<p>图片欣赏</p>
+					<img src="./img/tk.jpg" alt="tk" >
+				</div>
+				<div class="img00">
+					<p>图片欣赏</p>
+					<img src="./img/tk.jpg" alt="tk" >
+				</div>
+				<div class="img00">
+					<p>图片欣赏</p>
+					<img src="./img/tk.jpg" alt="tk" >
+				</div>
+			</div>
+			
+			
+			<div id="pm">
+				<h1>一级标题</h1>
+				<h2>二级标题</h2>
+				<p>文章作者</p><p>文章发布时间</p>
+
+				<ol>
+					<li>排名1</li>
+					<li>排名2</li>
+					<li>排名3</li>
+				</ol>
+			</div>
+			<div id="table">
+				
+				<p>表格</p>
+
+				<table border="1">
+					<tr><th>表头</th>
+						<th>表头</th>
+						<th>表头</th>
+					</tr>
+					<tr><td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td></tr>
+					<tr><td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td></tr>
+					<tr><td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td></tr>
+					<tr><td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td></tr>
+					<tr><td>总计</td>
+					<td colspan="2">1000</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+	
+		<div id="aside">
+			<h1>这是侧边框的标题</h1>
+			<h1>注册窗口</h1>
+			<form id="zc">
+	 			注册邮箱:
+	 			<br>
+				<input type="text" name="email">
+				<br>
+				输入密码:
+				<br>
+				<input type="text" name="password">
+				<br>
+				确认密码:
+				<br>
+				<input type="text" name="pass">
+				<br>
+				<input type="radio" name="sex" value="male" checked>男
+				<input type="radio" name="sex" value="female">女
+				<br>
+				<input type="checkbox" name="work">吃饭
+				<input type="checkbox" name="play">玩乐
+				<input type="checkbox" name="sleep">睡觉
+				<br>
+				<select name="add">
+					<option value="cn">中国</option>
+					<option value="bg">北京</option>
+					<option value="gd">广东</option>
+					<option value="sh">上海</option>
+				</select>
+				<br>
+				个人介绍
+				<br>
+				<textarea cols="30" rows="5"></textarea>
+				<br>
+				<input type="submit" value="提交">
+			</form> 
+
 		</div>
 	</div>
-	
+
+	<div id="footer"><span>&copy;版权所有</span></div>
+
 </body>
 </html>
